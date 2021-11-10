@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+.font-style{
+    
+   
+}
+.nav-bg{
+    background-color: #3c2f64;
+   
+}
+.nav-link{
+    color: rgb(212, 209, 200);
+    font-weight: 700;
+   
+}
+.user-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
