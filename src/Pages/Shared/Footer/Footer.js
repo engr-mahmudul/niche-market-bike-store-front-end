@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchLocation, faSms, faPhone, faCopyright } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-// import locationImg from '../../images/footer/footer.png'
+import locationImg from '../../../Images/Footer/loaction.png'
 
 const Footer = () => {
     const location = <FontAwesomeIcon icon={faSearchLocation} />
@@ -16,7 +16,7 @@ const Footer = () => {
                 <Col lg={8} md={6} sm={12} xs={12} >
                     <Container className=" mx-3">
 
-                        <img src='' alt="" height='250' width='70%' style={{ borderRadius: '5px' }} />
+                        <img src={locationImg} alt="" height='250' width='70%' style={{ borderRadius: '5px' }} />
                     </Container>
                 </Col>
                 <Col lg={4} md={6} sm={12} xs={12}>
@@ -28,7 +28,7 @@ const Footer = () => {
             </Row >
 
             <div className='d-flex justify-content-center'>
-                <p className='mt-4'>Copyright {copyright} 2021 travelingworld.com</p>
+                <p className='mt-4'>Copyright {copyright} 2021 bikestore.com</p>
             </div>
         </Container>
 

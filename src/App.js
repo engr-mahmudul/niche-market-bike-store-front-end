@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home/Home';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import Footer from './Pages/Shared/Footer/Footer';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import Login from './Pages/Login/Login/Login';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route exact path='/home'>
             <Home></Home>
+          </Route>
+          <Route exact path='/login'>
+            <Login></Login>
           </Route>
           <Route path='*'>
             <PageNotFound></PageNotFound>

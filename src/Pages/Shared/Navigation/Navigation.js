@@ -19,10 +19,8 @@ const Navigation = () => {
 
 
                         <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/login" className='text-white' style={{ textAlign: 'center' }} >Login</Nav.Link>
+
 
                         {/* <Nav.Link as={HashLink} to="" >My Orders</Nav.Link> */}
 
