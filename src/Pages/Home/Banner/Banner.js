@@ -4,6 +4,7 @@ import { Carousel, Button } from 'react-bootstrap';
 import banner1 from '../../../Images/Banner/banner1.jpg'
 import banner2 from '../../../Images/Banner/banner2.jpg'
 import banner3 from '../../../Images/Banner/banner3.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -18,7 +19,10 @@ const Banner = () => {
 
                     <Carousel.Caption>
                         <h1 className=' google-fonts'> Your Dream Bike Collectiion</h1>
-                        <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        <Link to='/explore'>
+                            <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        </Link>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -29,7 +33,9 @@ const Banner = () => {
                     />
                     <Carousel.Caption>
                         <h1 className=' google-fonts' >Enjoy Your Dream Drive</h1>
-                        <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        <Link to='/explore'>
+                            <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        </Link>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -42,7 +48,9 @@ const Banner = () => {
 
                     <Carousel.Caption>
                         <h1 className=' google-fonts' > Enjoy Exclusive offfers Also </h1>
-                        <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        <Link to='/explore'>
+                            <Button type="button" variant="info" className='px-5  fw-bold' style={{ marginBottom: '80px', color: '#382353' }}> Explore Us</Button>
+                        </Link>
 
                     </Carousel.Caption>
                 </Carousel.Item>

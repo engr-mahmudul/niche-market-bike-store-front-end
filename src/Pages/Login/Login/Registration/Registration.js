@@ -8,7 +8,7 @@ import useAuth from '../../../../hooks/useAuth';
 
 const Registration = () => {
     const [registerData, setRegisterData] = useState({});
-    const { registerUser } = useAuth();
+    const { registerUser, setUser, user } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -30,7 +30,9 @@ const Registration = () => {
         else {
 
             registerUser(registerData.email, registerData.password, registerData.name, history);
-            alert("Registration Successfully");
+            // alert("Registration Successfully");
+
+
         }
         e.preventDefault();
     }

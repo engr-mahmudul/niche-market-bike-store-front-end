@@ -24,6 +24,7 @@ const Navigation = () => {
 
 
                         <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/explore" className='text-white' style={{ textAlign: 'center' }} >Explore Us</Nav.Link>
 
 
 

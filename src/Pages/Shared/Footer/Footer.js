@@ -10,7 +10,7 @@ const Footer = () => {
     const phone = <FontAwesomeIcon icon={faPhone} />
     const copyright = <FontAwesomeIcon icon={faCopyright} />
     return (
-        <Container fluid className='text-white p-4 nav-bg mt-5'>
+        <Container fluid className='text-white p-4 nav-bg'>
             <Row className=''>
 
                 <Col lg={8} md={6} sm={12} xs={12} >
