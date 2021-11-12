@@ -1,0 +1,22 @@
+.login-form input{
+    width: 300px;
+    line-height: 30px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(114, 72, 149)
+}
+.login-form button{
+    width: 90%;
+    
+    margin: 10px 10px;
+    border-radius: 10px;
+
+}
+.toogle-button{
+    border: none;
+    outline: none;
+    background-color: white;
+    color:rgb(57, 57, 231);
+    font-weight: 300;
+    font-size: 14px;
+}

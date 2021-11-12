@@ -1,10 +1,15 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import './Navigation.css'
 import navlogo from '../../../Images/NavLogo/navlogo.png'
+import useAuth from '../../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
+    const userIcon = <FontAwesomeIcon icon={faSignOutAlt} />
+    const { user, logOut } = useAuth()
     return (
         <>
             <Navbar className='nav-bg py-2 nav-container' sticky="top" collapseOnSelect expand="lg" >
@@ -19,17 +24,21 @@ const Navigation = () => {
 
 
                         <Nav.Link as={HashLink} to="/home" className='text-white' style={{ textAlign: 'center' }} >Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/login" className='text-white' style={{ textAlign: 'center' }} >Login</Nav.Link>
+
+
 
 
                         {/* <Nav.Link as={HashLink} to="" >My Orders</Nav.Link> */}
 
-                        {/* {user?.email ?
-                    <Nav className='ml-4'>
+                        {user?.email ?
+                            <Nav className='ml-4'>
 
-                        <Nav.Link as={HashLink} to="/myOrders" className='text-white' >My Orders</Nav.Link> <span> <Button onClick={logOut} className='mr-2' style={{ border: 'none', outline: 'none', fontSize: 'larger', backgroundColor: '#8264e6' }}> {userIcon} </Button> <span style={{ color: 'yellow', fontWeight: '700' }}>{user.displayName}</span></span>
-                    </Nav> :
-                    <Nav.Link as={HashLink} to="/login" className='text-white' >Log in</Nav.Link>} */}
+                                <Nav.Link as={HashLink} to="/dashboard" className='text-white' >Dashboard</Nav.Link>
+
+                                <span> <Button onClick={logOut} className='mr-2' style={{ border: 'none', outline: 'none', fontSize: 'larger', backgroundColor: '#382353' }}> {userIcon} </Button> <span style={{ color: 'yellow', fontWeight: '300', fontSize: '12px' }}>{user.displayName}</span></span>
+                            </Nav> :
+                            <Nav.Link as={HashLink} to="/login" className='text-white' style={{ textAlign: 'center' }} >Login</Nav.Link>
+                        }
 
 
                     </Navbar.Collapse>
