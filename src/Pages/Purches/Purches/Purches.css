@@ -1,0 +1,35 @@
+.details-page-style{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+    background-color: rgb(244, 236, 223);
+}
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+}
+.details img{
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 5px;
+    height: 330px;
+}
+
+.shipping-form{
+  
+    
+}
+.shipping-form input,textarea {
+    display: block;
+    margin-top: 30px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+.error{
+    color: red;
+}

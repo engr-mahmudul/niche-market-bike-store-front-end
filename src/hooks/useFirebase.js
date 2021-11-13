@@ -89,17 +89,24 @@ const useFirebase = () => {
 
     // -------------------------------------Admin check----------------------------------------- 
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/users/${user.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setAdmin(data.admin))
-    // }, [user.email])
+    useEffect(() => {
+        const url = `http://localhost:5000/users/${user?.email}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data === 'admin') {
+                    setAdmin(true);
+                }
+                console.log(data);
+            })
+    }, [user?.email])
 
     // -------------------------------------Log Out User----------------------------------------- 
     const logOut = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
             // Sign-out successful.
+            setAdmin(false);
         }).catch((error) => {
             // An error happened.
         })

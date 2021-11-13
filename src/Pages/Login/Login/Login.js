@@ -19,7 +19,7 @@ const Login = () => {
         const newData = { ...loginData };
         newData[field] = value;
         setLoginData(newData);
-        console.log(newData);
+        // console.log(newData);
     }
     const loginFormSubmitHandler = e => {
         loginUser(loginData.email, loginData.password, location, history)

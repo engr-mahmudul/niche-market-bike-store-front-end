@@ -7,6 +7,8 @@ const PageNotFound = () => {
     return (
         <div>
             <Navigation></Navigation>
+            {/* Navigation */}
+
             <div style={{ textAlign: 'center', marginTop: "150px" }}>
                 <h1 style={{ color: 'red', fontSize: '90px' }}> 404 </h1>
                 <h2>Page Not Found</h2>

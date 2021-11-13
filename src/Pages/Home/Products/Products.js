@@ -6,7 +6,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://arcane-escarpment-94457.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 let neededData = [];

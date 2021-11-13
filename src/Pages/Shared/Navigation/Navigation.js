@@ -32,11 +32,13 @@ const Navigation = () => {
                         {/* <Nav.Link as={HashLink} to="" >My Orders</Nav.Link> */}
 
                         {user?.email ?
-                            <Nav className='ml-4'>
+                            <Nav className='ml-4 text-center'>
+
 
                                 <Nav.Link as={HashLink} to="/dashboard" className='text-white' >Dashboard</Nav.Link>
+                                <span>
 
-                                <span> <Button onClick={logOut} className='mr-2' style={{ border: 'none', outline: 'none', fontSize: 'larger', backgroundColor: '#382353' }}> {userIcon} </Button> <span style={{ color: 'yellow', fontWeight: '300', fontSize: '12px' }}>{user.displayName}</span></span>
+                                    <Button onClick={logOut} className='mr-2' style={{ border: 'none', outline: 'none', fontSize: 'larger', backgroundColor: '#382353' }}> {userIcon} </Button> <span style={{ color: 'yellow', fontWeight: '300', fontSize: '12px' }}>{user.displayName}</span></span>
                             </Nav> :
                             <Nav.Link as={HashLink} to="/login" className='text-white' style={{ textAlign: 'center' }} >Login</Nav.Link>
                         }
