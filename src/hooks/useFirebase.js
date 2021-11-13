@@ -25,7 +25,7 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name };
 
                 // Send data to the database
-                // saveUser(email, name, 'POST');
+                saveUser(email, name, 'POST');
 
 
                 //Update user name to the firebae 

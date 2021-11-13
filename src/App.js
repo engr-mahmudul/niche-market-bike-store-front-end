@@ -17,31 +17,31 @@ function App() {
     <div className="">
       <AuthProvider>
         <BrowserRouter>
-          <Navigation></Navigation>
+
           <Switch>
             <Route exact path='/'>
               <Home></Home>
             </Route>
-            <Route exact path='/home'>
+            <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route exact path='/login'>
+            <Route path='/login'>
               <Login></Login>
             </Route>
-            <Route exact path='/register'>
+            <Route path='/register'>
               <Registration></Registration>
             </Route>
-            <Route exact path='/dashboard'>
+            <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
-            </Route>
-            <Route exact path='/explore'>
+            </PrivateRoute>
+            <Route path='/explore'>
               <Explore></Explore>
             </Route>
             <Route path='*'>
               <PageNotFound></PageNotFound>
             </Route>
           </Switch>
-          <Footer></Footer>
+
         </BrowserRouter>
       </AuthProvider>
     </div>
