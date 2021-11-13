@@ -1,4 +1,4 @@
-.login-form input{
+.login-form input, textarea{
     width: 300px;
     line-height: 30px;
     margin: 10px 10px;

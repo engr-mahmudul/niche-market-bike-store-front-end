@@ -90,7 +90,7 @@ const useFirebase = () => {
     // -------------------------------------Admin check----------------------------------------- 
 
     useEffect(() => {
-        const url = `http://localhost:5000/users/${user?.email}`;
+        const url = `https://arcane-escarpment-94457.herokuapp.com/users/${user?.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -116,7 +116,7 @@ const useFirebase = () => {
     //---------------------------------------Save User Data to Database------------------------
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://arcane-escarpment-94457.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

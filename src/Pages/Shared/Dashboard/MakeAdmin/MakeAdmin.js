@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     const makeAdminSubmitHandler = (e) => {
         // const user = { email: email };
         // console.log(user);
-        const url = `http://localhost:5000/users/${email}`;
+        const url = `https://arcane-escarpment-94457.herokuapp.com/users/${email}`;
         console.log(url);
         fetch(url, {
             method: 'PUT',
