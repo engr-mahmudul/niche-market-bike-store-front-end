@@ -50,6 +50,11 @@ const Login = () => {
 
                                 </form>
                             </div>
+                            {
+                                authError && <div className='text-center text-danger'>
+                                    <p style={{ fontSize: '15px' }}>{authError}</p>
+                                </div>
+                            }
                         </div>
                     </Col>
                 </Row>

@@ -9,7 +9,7 @@ import useAuth from '../../../../hooks/useAuth';
 const Registration = () => {
     const [registerData, setRegisterData] = useState({});
 
-    const { registerUser, setUser, user } = useAuth();
+    const { registerUser, setUser, user, authError } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -63,7 +63,13 @@ const Registration = () => {
                                     </Link>
 
                                 </form>
+
                             </div>
+                            {
+                                authError && <div className='text-center text-danger'>
+                                    <p style={{ fontSize: '15px' }}>{authError}</p>
+                                </div>
+                            }
                         </div>
                     </Col>
                 </Row>

@@ -18,6 +18,7 @@ const useFirebase = () => {
 
     const registerUser = (email, password, name, history) => {
         setIsLoading(true);
+        setAuthError('');
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
@@ -35,6 +36,7 @@ const useFirebase = () => {
 
                 }).catch((error) => {
 
+                    setAuthError(error.message);
                 });
                 history.replace('/');
 
@@ -49,6 +51,7 @@ const useFirebase = () => {
     //----------------------------------------Login User-------------------------------------
     const loginUser = (email, password, location, history) => {
         setIsLoading(true);
+        setAuthError('');
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
