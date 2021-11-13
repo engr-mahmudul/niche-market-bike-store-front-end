@@ -10,4 +10,4 @@ This is a niche marketing website. It has some pages but works as a single page 
 - Using this project you will be able to purches bike from our website.
 - You will be to watch your orders and remove if needeed.
 - As as admin you will have the power make admin others,manage orders and products.
-- As a admin will be able to add a new product and delete product.
+- As a admin will be able to add a new product and delete product from database.

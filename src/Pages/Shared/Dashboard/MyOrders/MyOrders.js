@@ -1,11 +1,13 @@
-import { IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Container, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../../hooks/useAuth';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Spinner } from 'react-bootstrap';
 
 
 const MyOrders = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { user } = useAuth();
     useEffect(() => {
         const url = `https://arcane-escarpment-94457.herokuapp.com/orders?email=${user?.email}`
@@ -13,11 +15,12 @@ const MyOrders = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data));
+        setLoading(false);
     }, [products])
 
     const deleteHandle = id => {
         // console.log(id);
-        const procced = window.confirm("Are you sure to remove this service?");
+        const procced = window.confirm("Are you sure to remove this Product?");
         if (procced) {
             const url = `https://arcane-escarpment-94457.herokuapp.com/orders/${id}`;
             fetch(url, {
@@ -27,9 +30,14 @@ const MyOrders = () => {
         }
 
     }
+    if (loading) {
+        return <div >
+            <Spinner style={{ margin: "100px 50%" }} animation="border" variant="danger" />
+        </div>
+    }
 
     return (
-        <div>
+        <Container>
             <Typography variant='h5' sx={{ fontWeight: 700, mb: 3, color: 'green', textAlign: 'center' }}>
                 Total Ordered: {products.length} products
             </Typography>
@@ -65,7 +73,7 @@ const MyOrders = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </div>
+        </Container>
     );
 };
 
