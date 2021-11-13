@@ -42,7 +42,7 @@ function Dashboard(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const { user, admin, logOut } = useAuth();
-    console.log(admin);
+    // console.log(admin);
     let { path, url } = useRouteMatch(); // nested routing er jonno 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);

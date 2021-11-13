@@ -1,0 +1,6 @@
+
+.ex-image :hover{
+    transform: scale(1.03);
+    overflow: hidden;
+    transition: transform .5s ease;
+}

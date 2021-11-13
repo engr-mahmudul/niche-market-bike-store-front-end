@@ -7,7 +7,7 @@ const ReviewPart = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://arcane-escarpment-94457.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => {
 
@@ -17,7 +17,7 @@ const ReviewPart = () => {
             });
     }, [])
     return (
-        <>
+        <div className='my-4'>
             <h1 className='text-center fw-bold my-5' style={{ fontSize: 50, color: '#382353' }}>Customer Reviews</h1>
             <Container>
                 <Row>
@@ -26,7 +26,7 @@ const ReviewPart = () => {
                     }
                 </Row>
             </Container>
-        </>
+        </div>
     );
 };
 

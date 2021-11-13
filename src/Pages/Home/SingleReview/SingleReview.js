@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 
 const SingleReview = (props) => {
     let { name, email, comment, ratings } = props.review;
-
+    ratings = parseInt(ratings);
     if (ratings > 5) { ratings = 5; }
     else if (ratings < 1) { ratings = 1; }
     return (
